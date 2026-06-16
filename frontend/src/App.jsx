@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import Home from '../pages/Home';
+import Home from './pages/Home';               // Only ONE slash here
 import Login from './components/Login';
 import Signup from './components/Signup';
-import ResultPage from './pages/ResultPage';
+import ResultPage from './pages/ResultPage';   // Only ONE slash here
 
 // Private protected route
 function RequireAuth({ children }) {
