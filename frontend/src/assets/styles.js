@@ -1,6 +1,6 @@
 export const navbarStyles = {
   // Main nav container
-  nav: "w-full h-20 bg-gradient-to-r from-[#0b001a] via-[#1a0033] to-[#0b001a] border-b border-purple-500/3 shadow-[0_0_25px_rgba(139,92,246,0.25)] backdrop-blur-md px-3 sm:px-5 lg:px-10 h-16 sm:h-18 lg:h-20 flex items-center justify-between relative overflow-hidden",
+  nav: "w-full h-20 bg-gradient-to-r from-[#0b001a] via-[#1a0033] to-[#0b001a] border-b border-purple-500/3 shadow-[0_0_25px_rgba(139,92,246,0.25)] backdrop-blur-md px-3 sm:px-5 lg:px-10 h-16 sm:h-18 lg:h-20 flex items-center justify-between relative overflow-hidden z-50",
 
   // Main container
   container: "w-full max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 relative z-10",
@@ -27,13 +27,13 @@ export const navbarStyles = {
   buttonIcon: "h-4 w-4 flex-shrink-0",
 
   // Mobile menu
-  mobileMenuContainer: "md:hidden flex items-center",
-  menuToggleButton: "inline-flex items-center justify-center p-2.5 rounded-full text-violet-300 hover:text-white bg-[#140C26]/80 border border-violet-900/30 shadow-[0_4px_20px_rgba(124,58,237,0.2)] hover:bg-[#1F1638] hover:shadow-[0_8px_30px_rgba(124,58,237,0.3)] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500/50 ring-offset-1 ring-offset-[#0E0A1C]",
+  mobileMenuContainer: "relative md:hidden flex items-center z-50",
+  menuToggleButton: "inline-flex items-center justify-center p-2 rounded-full text-violet-300 hover:text-white bg-[#140C26]/80 border border-violet-900/30 shadow-[0_4px_20px_rgba(124,58,237,0.2)] hover:bg-[#1F1638] hover:shadow-[0_8px_30px_rgba(124,58,237,0.3)] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500/50 ring-offset-1 ring-offset-[#0E0A1C]",
   menuIcon: "h-5 w-5",
-  mobileMenuPanel: "absolute right-4 top-full mt-3 w-48 bg-[#140C26] rounded-lg shadow-lg border z-50 overflow-hidden",
-  mobileMenuList: "divide-y",
-  mobileMenuItem: "w-full text-left px-4 py-3 flex items-center gap-2 text-sm hover:bg-[#1F1638]",
-  mobileMenuIcon: "h-4 w-4",
+  mobileMenuPanel: "absolute right-4 top-full mt-2 w-52 bg-[#0F0C20] border border-[#221A3D] rounded-2xl shadow-2xl p-2 z-[999] animate-fadeIn",
+  mobileMenuList: "flex flex-col space-y-1 m-0 p-0 list-none",
+  mobileMenuItem: "w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium text-gray-300 hover:text-white rounded-xl hover:bg-indigo-600/20 hover:border-l-2 hover:border-indigo-500 transition-all text-left",
+  mobileMenuIcon: "w-4 h-4 text-indigo-400 shrink-0",
 
   // Animations and utility styles
   animations: `
@@ -178,13 +178,13 @@ export const sidebarStyles = {
   pageContainer: "min-h-screen bg-[#0E0A1C]",
 
   // Mobile overlay
-  mobileOverlay: "fixed inset-0 bg-black/15 z-30 md:hidden",
-
+  mobileOverlay: "fixed inset-0 bg-black/60 backdrop-blur-sm z-[99998] md:hidden",
+  
   // Main container
   mainContainer: "flex w-full overflow-x-hidden xl:overflow-y-hidden xl:h-screen",
 
   // Sidebar styles
-  sidebar: "fixed h-screen z-40 top-0 left-0 w-80 transform transition-transform duration-300 ease-in-out bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] rounded-r-2xl overflow-y-auto border-r border-[#2A1F45] md:relative md:translate-x-0 md:flex md:flex-col",
+  sidebar: "w-80 h-full bg-[#0F0C20] border-r border-[#221A3D] flex flex-col z-[99999] transition-transform duration-300 md:translate-x-0 md:static fixed top-0 bottom-0 left-0",
 
   // Sidebar header
   sidebarHeader: "top-0 z-20 p-6 bg-[#140C26] text-[#EDE9FE] relative overflow-hidden",
@@ -251,7 +251,7 @@ export const sidebarStyles = {
   mobileLevelButton: "flex-none px-4 py-2 rounded-xl border border-[#3A2C5E] bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] text-sm font-medium",
 
   // Welcome screen
-  welcomeContainer: "h-full xl:pt-75 font-[poppins] lg:pb-90 flex items-center justify-center",
+  welcomeContainer: "min-h-[calc(100vh-5rem)] w-full font-[poppins] flex items-center justify-center",
   welcomeContent: "text-center font-[poppins] max-w-2xl mx-auto bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45]",
   welcomeIcon: "inline-flex items-center justify-center p-4 bg-violet-900/40 rounded-full shadow mb-6",
   welcomeTitle: "text-2xl md:text-4xl font-bold text-[#EDE9FE] mb-4",
@@ -269,8 +269,7 @@ export const sidebarStyles = {
   welcomePromptText: "text-[#DDD6FE] font-medium flex items-center justify-center",
 
   // Level selection
-  levelSelectionContainer: "h-full xl:mt-60 md:pb-200 pb-30 flex items-center justify-center",
-  levelSelectionContent: "text-center bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45] max-w-md",
+  levelSelectionContainer: "min-h-[calc(100vh-5rem)] py-10 flex items-center justify-center", levelSelectionContent: "text-center bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45] max-w-md",
   techSelectionIcon: "p-5 rounded-2xl inline-flex mb-6 shadow-[0_8px_30px_rgba(124,58,237,0.12)]",
   techSelectionTitle: "text-2xl md:text-3xl font-bold text-[#EDE9FE] mb-2",
   techSelectionDescription: "text-[#C4B5FD] mb-6",
@@ -278,7 +277,7 @@ export const sidebarStyles = {
   techSelectionPromptText: "text-[#DDD6FE] font-medium",
 
   // Results screen
-  resultsContainer: "h-full lg:pb-140 xl:pb-0 md:pb-90 flex items-center justify-center",
+  resultsContainer: "min-h-[calc(100vh-5rem)] py-10 flex items-center justify-center",
   resultsContent: "bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45] max-w-2xl w-full",
   resultsHeader: "text-center",
   performanceIcon: "p-4 rounded-2xl inline-flex mb-6 shadow-[0_8px_30px_rgba(124,58,237,0.12)]",
