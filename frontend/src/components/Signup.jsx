@@ -30,7 +30,7 @@ const Signup = () => {
         return e;
     };
 
-    const API_BASE = 'http://localhost:4000';
+    const API_BASE = 'https://quiz-backend-ptrn.onrender.com';
 
     const handleSubmit = async (ev) => {
         ev.preventDefault();

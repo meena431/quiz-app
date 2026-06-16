@@ -14,7 +14,7 @@ const Badge = ({ percent }) => {
   return <span className={resultStyles.badgeNeedsWork}>Needs Work</span>;
 };
 
-const Result = ({ apiBase = "http://localhost:4000" }) => {
+const Result = ({ apiBase = "https://quiz-backend-ptrn.onrender.com" }) => {
 
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(true);
