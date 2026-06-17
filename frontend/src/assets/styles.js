@@ -51,8 +51,6 @@ export const navbarStyles = {
   `
 };
 
-
-
 export const loginStyles = {
   // Page container
   pageContainer: "min-h-screen bg-[#0E0A1C] flex items-center justify-center p-4 sm:p-6 relative overflow-hidden",
@@ -115,8 +113,6 @@ export const loginStyles = {
   animations: `@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');:root{--card-radius:16px;}@keyframes gradient-anim{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}@keyframes float-slow{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}@keyframes float-slower{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}.animate-float-slow{animation:float-slow 9s ease-in-out infinite}.animate-float-slower{animation:float-slower 11s ease-in-out infinite}#login-heading,form,input,button,a,p,label,span{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}@media(max-width:360px){.rounded-3xl{border-radius:10px}}@media(min-width:1024px){.rounded-3xl{border-radius:16px}}`
 };
 
-
-
 export const signupStyles = {
   // Page container
   pageContainer: "min-h-screen bg-[#0E0A1C] flex items-center justify-center p-4 sm:p-6 relative",
@@ -171,20 +167,20 @@ export const signupStyles = {
   animations: `@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');:root{--card-radius:16px;}@keyframes gradient-anim{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}@keyframes float-slow{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}.animate-float-slow{animation:float-slow 9s ease-in-out infinite}#signup-heading,form,input,button,a,p,label,span{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}@media(max-width:360px){.rounded-3xl{border-radius:10px}}@media(min-width:1024px){.rounded-3xl{border-radius:16px}}`
 };
 
-
-
 export const sidebarStyles = {
   // Page container
   pageContainer: "min-h-screen bg-[#0E0A1C]",
 
   // Mobile overlay
-  mobileOverlay: "fixed inset-0 bg-black/60 backdrop-blur-sm z-[99998] md:hidden",
+  // FIX: Forced high backdrop z-index and explicit opacity layer settings
+  mobileOverlay: "fixed inset-0 bg-black/60 backdrop-blur-md z-[100] md:hidden",
   
   // Main container
-  mainContainer: "flex w-full overflow-x-hidden xl:overflow-y-hidden xl:h-screen",
+  mainContainer: "flex w-full overflow-x-hidden xl:min-h-screen",
 
   // Sidebar styles
-  sidebar: "fixed h-screen z-40 top-0 left-0 w-80 transform transition-transform duration-300 ease-in-out bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] rounded-r-2xl overflow-y-auto border-r border-[#2A1F45] md:relative md:translate-x-0 md:flex md:flex-col border-2 border-white",
+  // FIX: Shifted mobile rendering layer to z-[200] so it explicitly sits ABOVE the backdrop blur
+  sidebar: "fixed h-screen z-[200] top-0 left-0 w-80 transform transition-transform duration-300 ease-in-out bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] rounded-r-2xl overflow-y-auto border-r border-[#2A1F45] md:relative md:translate-x-0 md:flex md:flex-col",
   
   // Sidebar header
   sidebarHeader: "top-0 z-20 p-6 bg-[#140C26] text-[#EDE9FE] relative overflow-hidden",
@@ -336,7 +332,6 @@ export const sidebarStyles = {
 
   // Custom styles
   customStyles: `
-
     .sidebar-content { -webkit-overflow-scrolling: touch; }
 
     aside .sidebar-content::-webkit-scrollbar { width: 10px; }
@@ -366,8 +361,6 @@ export const sidebarStyles = {
     }
   `
 };
-
-
 
 export const resultStyles = {
   // Page container

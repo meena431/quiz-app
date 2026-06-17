@@ -506,7 +506,7 @@ const Sidebar = () => {
 									journey. Test your knowledge at basic, intermediate, or
 									advanced levels.
 								</p>
-
+								
 								<div className={sidebarStyles.featuresGrid}>
 									<div className={sidebarStyles.featureCard}>
 										<div className={sidebarStyles.featureIcon}>
