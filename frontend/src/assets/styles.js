@@ -184,8 +184,8 @@ export const sidebarStyles = {
   mainContainer: "flex w-full overflow-x-hidden xl:overflow-y-hidden xl:h-screen",
 
   // Sidebar styles
-  sidebar: "w-80 h-full bg-[#0F0C20] border-r border-[#221A3D] flex flex-col z-[99999] transition-transform duration-300 md:translate-x-0 md:static fixed top-0 bottom-0 left-0",
-
+  sidebar: "fixed h-screen z-40 top-0 left-0 w-80 transform transition-transform duration-300 ease-in-out bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] rounded-r-2xl overflow-y-auto border-r border-[#2A1F45] md:relative md:translate-x-0 md:flex md:flex-col border-2 border-white",
+  
   // Sidebar header
   sidebarHeader: "top-0 z-20 p-6 bg-[#140C26] text-[#EDE9FE] relative overflow-hidden",
   headerDecoration1: "absolute top-0 right-0 w-32 h-32 -mt-16 -mr-16 bg-[#140C26] opacity-6 rounded-full",
