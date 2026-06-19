@@ -172,7 +172,6 @@ export const sidebarStyles = {
   pageContainer: "min-h-screen bg-[#0E0A1C]",
 
   // Mobile overlay
-  // FIX: Forced high backdrop z-index and explicit opacity layer settings
   mobileOverlay: "fixed inset-0 bg-black/60 backdrop-blur-md z-[100] md:hidden",
   
   // Main container
@@ -232,17 +231,16 @@ export const sidebarStyles = {
 
   // Mobile header
   mobileHeader: "flex items-center justify-between mb-4 md:hidden",
-  menuButton: "p-2.5 rounded-full text-violet-300 hover:text-white bg-[#140C26]/80 border border-violet-900/30 shadow-[0_4px_20px_rgba(124,58,237,0.2)] hover:bg-[#1F1638] hover:shadow-[0_8px_30px_rgba(124,58,237,0.3)] hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-violet-500/50",
   mobileTitle: "flex-1 mx-3",
   mobileTechInfo: "flex items-center font-[poppins] justify-center space-x-3",
   mobileTechIcon: "p-2 rounded-md border",
   mobileTechText: "text-center",
-  mobileTechName: "text-sm font-semibold",
+  mobileTechName: "text-sm font-semibold text-white",
   mobileTechLevel: "text-xs text-[#A78BFA]",
-  mobilePlaceholder: "text-center text-sm text-[#A78BFA]",
+  mobilePlaceholder: "text-center text-sm text-[#A78BFA] text-white",
 
   // Mobile levels
-  mobileLevels: "md:hidden mb-4",
+  mobileLevels: "md:hidden mb-4 text-violet-200",
   mobileLevelsContainer: "flex gap-2 overflow-x-auto",
   mobileLevelButton: "flex-none px-4 py-2 rounded-xl border border-[#3A2C5E] bg-[#140C26] shadow-[0_8px_30px_rgba(124,58,237,0.12)] text-sm font-medium",
 
@@ -260,9 +258,12 @@ export const sidebarStyles = {
   featureTitle: "font-semibold text-[#DDD6FE] mb-2",
   featureDescription: "text-xs md:text-sm text-[#C4B5FD]",
 
+  // Start Quiz Button
+  startQuizButton: "w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-violet-600 bg-[size:200%_auto] animate-shimmer text-white text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(139,92,246,0.3)] hover:shadow-[0_0_40px_rgba(217,70,239,0.6)] transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-fuchsia-500/50",
+  
   // Welcome prompt
-  welcomePrompt: "bg-[#140C26] p-3 md:p-4 rounded-lg border border-[#2A1F45] shadow-inner",
-  welcomePromptText: "text-[#DDD6FE] font-medium flex items-center justify-center",
+  welcomePrompt: "bg-[#140C26] p-3 md:p-4 rounded-lg shadow-inner",
+  welcomePromptText: "text-[#DDD6FE] text-xs flex items-center justify-center",
 
   // Level selection
   levelSelectionContainer: "min-h-[calc(100vh-5rem)] py-10 flex items-center justify-center", levelSelectionContent: "text-center bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45] max-w-md",

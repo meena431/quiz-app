@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import { Award, BookOpen, CheckCircle, ChevronDown, ChevronRight, Code, Coffee, Cpu, Database, Globe, Layout, Menu, Sparkles, Star, Target, Terminal, Trophy, XCircle, Zap, X } from 'lucide-react';
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://quiz-backend-ptrn.onrender.com';
 
 const Sidebar = () => {
 
@@ -368,9 +368,9 @@ const Sidebar = () => {
 								<button
 									onClick={() => handleTechSelect(tech.id)}
 									className={`${sidebarStyles.techButton} ${selectedTech === tech.id
-    									? sidebarStyles.techButtonSelected  
-    									: sidebarStyles.techButtonNormal  
-  										}`}
+										? sidebarStyles.techButtonSelected
+										: sidebarStyles.techButtonNormal
+										}`}
 								>
 									<div className={sidebarStyles.techButtonContent}>
 										<span className={`${sidebarStyles.techIcon} ${tech.color}`}>
@@ -438,43 +438,6 @@ const Sidebar = () => {
 				</aside>
 
 				<main className={sidebarStyles.mainContent}>
-					<div className={sidebarStyles.mobileHeader}>
-						<button
-							onClick={toggleSidebar}
-							className={sidebarStyles.menuButton}
-						>
-							<Menu size={20} />
-						</button>
-
-						<div className={sidebarStyles.mobileTitle}>
-							{selectedTech ? (
-								<div className={sidebarStyles.mobileTechInfo}>
-									<div
-										className={`${sidebarStyles.mobileTechIcon} ${technologies.find((t) => t.id === selectedTech).color
-											}`}
-									>
-										{technologies.find((t) => t.id === selectedTech).icon}
-									</div>
-									<div className={sidebarStyles.mobileTechText}>
-										<div className={sidebarStyles.mobileTechName}>
-											{technologies.find((t) => t.id === selectedTech).name}
-										</div>
-										<div className={sidebarStyles.mobileTechLevel}>
-											{selectedLevel
-												? `${selectedLevel.charAt(0).toUpperCase() +
-												selectedLevel.slice(1)
-												} level`
-												: "Select level"}
-										</div>
-									</div>
-								</div>
-							) : (
-								<div className={sidebarStyles.mobilePlaceholder}>
-									Select a technology from the menu
-								</div>
-							)}
-						</div>
-					</div>
 
 					{selectedTech && !selectedLevel && (
 						<div className={sidebarStyles.mobileLevels}>
@@ -506,7 +469,7 @@ const Sidebar = () => {
 									journey. Test your knowledge at basic, intermediate, or
 									advanced levels.
 								</p>
-								
+
 								<div className={sidebarStyles.featuresGrid}>
 									<div className={sidebarStyles.featureCard}>
 										<div className={sidebarStyles.featureIcon}>
@@ -545,10 +508,13 @@ const Sidebar = () => {
 									</div>
 								</div>
 
+								<button onClick={toggleSidebar} className={sidebarStyles.startQuizButton}>
+									Start Quiz
+								</button>
+
 								<div className={sidebarStyles.welcomePrompt}>
 									<p className={sidebarStyles.welcomePromptText}>
-										<Sparkles size={16} className="mr-2" />
-										Select any technology to begin your learning adventure!
+										<span className="flex items-start"><Sparkles size={14} className="shrink-0 mt-0.5" />Select any technology to begin your learning adventure!</span>
 									</p>
 								</div>
 							</div>
