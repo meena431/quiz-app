@@ -1,6 +1,6 @@
 export const navbarStyles = {
   // Main nav container
-  nav: "w-full h-20 bg-gradient-to-r from-[#0b001a] via-[#1a0033] to-[#0b001a] border-b border-purple-500/3 shadow-[0_0_25px_rgba(139,92,246,0.25)] backdrop-blur-md px-3 sm:px-5 lg:px-10 h-16 sm:h-18 lg:h-20 flex items-center justify-between relative overflow-hidden z-50",
+  nav: "w-full h-20 bg-gradient-to-r from-[#0b001a] via-[#1a0033] to-[#0b001a] border-b border- shadow-[0_0_25px_rgba(139,92,246,0.25)] backdrop-blur-md px-3 sm:px-5 lg:px-10 h-16 sm:h-18 lg:h-20 flex items-center justify-between relative overflow-hidden z-50",
 
   // Main container
   container: "w-full max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 relative z-10",
@@ -246,7 +246,7 @@ export const sidebarStyles = {
 
   // Welcome screen
   welcomeContainer: "min-h-[calc(100vh-5rem)] w-full font-[poppins] flex items-center justify-center",
-  welcomeContent: "text-center font-[poppins] max-w-2xl mx-auto bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45]",
+  welcomeContent: "text-center font-[poppins] max-w-2xl mx-auto bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border-0 md:border border-[#2A1F45]",
   welcomeIcon: "inline-flex items-center justify-center p-4 bg-violet-900/40 rounded-full shadow mb-6",
   welcomeTitle: "text-2xl md:text-4xl font-bold text-[#EDE9FE] mb-4",
   welcomeDescription: "text-sm md:text-lg text-[#C4B5FD] mb-6 max-w-md mx-auto",
@@ -262,8 +262,8 @@ export const sidebarStyles = {
   startQuizButton: "w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-violet-600 bg-[size:200%_auto] animate-shimmer text-white text-lg font-bold tracking-wide shadow-[0_0_25px_rgba(139,92,246,0.3)] hover:shadow-[0_0_40px_rgba(217,70,239,0.6)] transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-fuchsia-500/50",
   
   // Welcome prompt
-  welcomePrompt: "bg-[#140C26] p-3 md:p-4 rounded-lg shadow-inner",
-  welcomePromptText: "text-[#DDD6FE] text-xs flex items-center justify-center",
+  welcomePrompt: "bg-[#140C26] p-3 md:p-4 rounded-lg border border-[#2A1F45] shadow-inner",
+  welcomePromptText: "text-[#DDD6FE] font-medium flex items-center justify-center",
 
   // Level selection
   levelSelectionContainer: "min-h-[calc(100vh-5rem)] py-10 flex items-center justify-center", levelSelectionContent: "text-center bg-[#140C26] p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(124,58,237,0.12)] border border-[#2A1F45] max-w-md",
