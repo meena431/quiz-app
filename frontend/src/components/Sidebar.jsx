@@ -462,7 +462,7 @@ const Sidebar = () => {
                                     <Award size={64} className="text-indigo-700" />
                                 </div>
                                 <h2 className={sidebarStyles.welcomeTitle}>
-                                    Welcome to Tech Quiz Master
+                                    Welcome to Codexa
                                 </h2>
                                 <p className={sidebarStyles.welcomeDescription}>
                                     Select a technology from the sidebar to start your quiz
